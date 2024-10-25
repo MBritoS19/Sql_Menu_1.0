@@ -1,0 +1,47 @@
+CREATE DATABASE receitas;
+CREATE DATABASE futebol;
+CREATE DATABASE loja;
+CREATE DATABASE livraria;
+
+USE receitas;
+
+CREATE TABLE ingredientes 
+(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	nome varchar(255) NOT NULL,
+	quantidade int NOT NULL
+);
+
+USE futebol;
+
+CREATE TABLE times
+(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	nome varchar(255) NOT NULL,
+	pontos int NOT NULL
+);
+
+USE loja;
+
+CREATE TABLE produtos
+(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	nome varchar(255) NOT NULL,
+	url varchar(255) NOT NULL,
+	descricao varchar(255) NOT NULL,
+	preco decimal(12,2) NOT NULL
+);
+
+USE livraria;
+
+CREATE TABLE livro
+(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	titulo varchar(255) NOT NULL,
+	idioma varchar(255) NOT NULL,
+	paginas int NOT NULL,
+	editora varchar(255) NOT NULL,
+	dataPublicacao date NOT NULL,
+	ISBN float NOT NULL
+);
+
